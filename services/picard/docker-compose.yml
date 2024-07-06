@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  picard:
+    image: mikenye/picard:2.10
+    container_name: picard
+    restart: unless-stopped
+    ports:
+      - ${PORT_PICARD}:5800
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/picard:/config
+      - ${MUSIC_DIR}:/storage

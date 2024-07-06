@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  minetest:
+    image: lscr.io/linuxserver/minetest:latest
+    container_name: minetest
+    restart: unless-stopped
+    ports:
+      - ${PORT_MINETEST}:30000/udp
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      CLI_ARGS: --gameid minetest --port 30000
+    volumes:
+      - ${CONFIG_DIR}/minetest:/config/.minetest

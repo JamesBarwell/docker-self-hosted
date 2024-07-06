@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  selfoss:
+    image: rsprta/selfoss
+    container_name: selfoss
+    restart: unless-stopped
+    ports:
+      - ${PORT_SELFOSS}:8888
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      VIRTUAL_PORT: 8888
+      CRON_PERIOD: 60m
+    volumes:
+      - ${CONFIG_DIR}/selfoss:/selfoss/data

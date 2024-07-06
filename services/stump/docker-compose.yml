@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  stump:
+    image: aaronleopold/stump:nightly
+    container_name: stump
+    restart: unless-stopped
+    ports:
+      - ${PORT_STUMP}:10801
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/stump:/config
+      - ${EBOOKS_DIR}:/data

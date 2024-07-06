@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  stirlingpdf:
+    image: frooodle/s-pdf:latest-ultra-lite
+    container_name: stirlingpdf
+    restart: unless-stopped
+    ports:
+      - ${PORT_STIRLINGPDF}:8080
+    user: ${PUID}:${PGID}
+    environment:
+      TZ: ${TZ}
+      DOCKER_ENABLE_SECURITY: "false"
+      INSTALL_BOOK_AND_ADVANCED_HTML_OPS: "false"
+      LANGS: en_GB
+    volumes:
+      - ${CONFIG_DIR}/stirlingpdf/trainingData:/usr/share/tessdata
+      - ${CONFIG_DIR}/stirlingpdf/extraConfigs:/configs
+      - ${CONFIG_DIR}/stirlingpdf/logs:/logs

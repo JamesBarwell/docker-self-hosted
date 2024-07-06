@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    restart: unless-stopped
+    ports:
+      - ${PORT_NAVIDROME}:4533
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      ND_LOGLEVEL: info
+    volumes:
+      - ${CONFIG_DIR}/navidrome:/data
+      - ${MUSIC_DIR}:/music:ro

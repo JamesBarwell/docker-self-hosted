@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  curl:
+    image: curlimages/curl
+    network_mode: "container:wireguard"
+    command: ifconfig.co

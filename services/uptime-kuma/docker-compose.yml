@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1.19.3-alpine
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - ${PORT_UPTIMEKUMA}:3001
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/uptime-kuma:/app/data

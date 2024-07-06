@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  cyberchef:
+    image: ghcr.io/gchq/cyberchef:latest
+    container_name: cyberchef
+    restart: unless-stopped
+    ports:
+      - ${PORT_CYBERCHEF}:80

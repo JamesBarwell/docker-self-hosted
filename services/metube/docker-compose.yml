@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  metube:
+    image: alexta69/metube
+    container_name: metube
+    restart: unless-stopped
+    ports:
+      - ${PORT_METUBE}:8081
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${YOUTUBE_DIR}:/downloads

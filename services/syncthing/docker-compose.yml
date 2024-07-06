@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/syncthing/config:/var/syncthing/config
+      - ${SYNC_PHONE_DIR}:/var/syncthing/sync-phone
+      - ${SYNC_PHONE_DCIM_DIR}:/var/syncthing/sync-phone-dcim

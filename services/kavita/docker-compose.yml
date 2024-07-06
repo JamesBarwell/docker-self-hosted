@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  kavita:
+    image: jvmilazz0/kavita:latest
+    container_name: kavita
+    restart: unless-stopped
+    ports:
+      - ${PORT_KAVITA}:5000
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/kavita:/kavita/config
+      - ${EBOOKS_DIR}:/ebooks:ro

@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  libreddit:
+    image: libreddit/libreddit:latest
+    container_name: libreddit
+    restart: unless-stopped
+    ports:
+      - ${PORT_LIBREDDIT}:8080
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}

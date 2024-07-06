@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  ubooquity:
+    image: lscr.io/linuxserver/ubooquity:latest
+    container_name: ubooquity
+    restart: unless-stopped
+    ports:
+      - ${PORT_UBOOQUITY_LIBRARY}:2202
+      - ${PORT_UBOOQUITY_ADMIN}:2203
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/ubooquity:/config
+      - ${EBOOKS_DIR}:/books

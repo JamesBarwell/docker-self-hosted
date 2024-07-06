@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  circles:
+    image: circles
+    container_name: circles
+    restart: unless-stopped
+    ports:
+      - ${PORT_CIRCLES}:8080
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/circles:/data

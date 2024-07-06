@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  gandi-dynamic-dns:
+    image: adamvig/gandi-dynamic-dns:latest
+    container_name: gandi-dynamic-dns
+    restart: unless-stopped
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      GANDI_API_KEY: ${GANDI_API_KEY}
+      DOMAIN: ${GANDI_DOMAIN}
+      RECORD_NAME: ${GANDI_RECORD_NAME}

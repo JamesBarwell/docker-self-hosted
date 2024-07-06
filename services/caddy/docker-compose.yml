@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  caddy:
+    image: caddy
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - ${PORT_CADDY}:80
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/caddy:/data
+      - ${MEDIA_DIR}:/srv/media:ro
+    command: caddy file-server --browse --root /srv

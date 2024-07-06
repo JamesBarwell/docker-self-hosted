@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  youtube-dl:
+    image: jeeaaasustest/youtube-dl:latest
+    container_name: youtube-dl
+    restart: unless-stopped
+    ports:
+      - ${PORT_YOUTUBEDL}:8080
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      youtubedl_webui: "true"
+      youtubedl_interval: 3h
+    volumes:
+      - ${CONFIG_DIR}/youtube-dl:/config
+      - ${YOUTUBE_DIR}:/downloads

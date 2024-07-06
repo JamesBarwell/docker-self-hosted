@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  smokeping:
+    image: lscr.io/linuxserver/smokeping:latest
+    container_name: smokeping
+    restart: unless-stopped
+    ports:
+      - ${PORT_SMOKEPING}:80
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/smokeping/config:/config
+      - ${CONFIG_DIR}/smokeping/data:/data

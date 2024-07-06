@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  slskd:
+    image: slskd/slskd
+    container_name: slskd
+    restart: unless-stopped
+    network_mode: "container:wireguard"
+    user: ${PUID}:${PGID}
+    environment:
+      TZ: ${TZ}
+      SLSKD_REMOTE_CONFIGURATION: "true"
+    volumes:
+      - ${CONFIG_DIR}/slskd:/app
+      - ${DOWNLOADS_DIR}:/downloads
+      - ${AUDIO_DIR}:/media/audio:ro
+      - ${AUDIOBOOKS_DIR}:/media/audiobooks:ro
+      - ${EBOOKS_DIR}:/media/ebooks:ro
+      - ${PODCASTS_DIR}:/media/podcasts:ro
+      - ${RADIO_DIR}:/media/radio:ro
+      - ${YOUTUBE_DIR}:/media/youtube:ro
