@@ -16,8 +16,9 @@ services:
     ports:
       - 51820:51820/udp
       # Services that use wireguard need their web GUI ports exposing here
-      - ${PORT_THELOUNGE}:9000
+      - ${PORT_FIREFOX}:3000
       - ${PORT_SLSKD_HTTP}:5030
       - ${PORT_SLSKD_LISTEN}:50300
+      - ${PORT_THELOUNGE}:9000
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1

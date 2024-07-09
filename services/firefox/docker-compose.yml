@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  firefox:
+    image: lscr.io/linuxserver/firefox:latest
+    container_name: firefox
+    restart: unless-stopped
+    network_mode: "container:wireguard"
+    shm_size: "1gb"
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      FIREFOX_CLI: https://duckduckgo.com/
+    volumes:
+      - ${CONFIG_DIR}/firefox:/config
+      - ${DOWNLOADS_DIR}:/downloads
