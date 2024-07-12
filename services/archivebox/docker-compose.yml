@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  archivebox:
+    image: archivebox/archivebox:latest
+    container_name: archivebox
+    restart: unless-stopped
+    ports:
+      - ${PORT_ARCHIVEBOX}:8000
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      ALLOWED_HOSTS: "*"
+      PUBLIC_INDEX: "true"
+      PUBLIC_SNAPSHOTS: "true"
+      PUBLIC_ADD_VIEW: "true"
+      SAVE_FAVICON: "false"
+      SAVE_WGET: "false"
+      SAVE_WARC: "false"
+      SAVE_PDF: "false"
+      SAVE_SCREENSHOT: "false"
+      SAVE_DOM: "false"
+      SAVE_SINGLEFILE: "true"
+      SAVE_READABILITY: "true"
+      SAVE_MERCURY: "true"
+      SAVE_GIT: "false"
+      SAVE_MEDIA: "false"
+      SAVE_ARCHIVE_DOT_ORG: "false"
+    volumes:
+      - ${CONFIG_DIR}/archivebox:/data
