@@ -51,9 +51,6 @@ Media server
 ### kavita
 E-book and comic server
 
-### libreddit
-Lightweight front-end for Reddit
-
 ### mealie
 Recipe and ingredient manager
 
@@ -74,6 +71,9 @@ Music file organiser and tagger
 
 ### pigallery
 Photo viewer
+
+### redlib
+Lightweight front-end for Reddit
 
 ### selfoss
 RSS reader
