@@ -39,6 +39,9 @@ Automatically set a Gandi DNS entry to point at a host
 ### gitea
 Git repository server
 
+### iplayer (scripts)
+Record TV and radio
+
 ### ittools
 Collection of handy dev tools
 
@@ -68,6 +71,9 @@ Photo manager and viewer
 
 ### picard
 Music file organiser and tagger
+
+### pigallery
+Photo viewer
 
 ### selfoss
 RSS reader
