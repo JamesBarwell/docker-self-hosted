@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  pigallery:
+    image: bpatrik/pigallery2:latest
+    container_name: pigallery
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    ports:
+      - ${PORT_PIGALLERY}:80
+    environment:
+      TZ: ${TZ}
+      NODE_ENV: production
+      Users-authenticationRequired: "false"
+    volumes:
+      - ${CONFIG_DIR}/pigallery/db:/app/data/db
+      - ${CONFIG_DIR}/pigallery/data/config:/app/data/config
+      - ${CONFIG_DIR}/pigallery/data/tmp:/app/data/tmp
+      - ${PHOTOS_DIR}:/app/data/images:ro
