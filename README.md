@@ -69,6 +69,9 @@ Photo manager and viewer
 ### picard
 Music file organiser and tagger
 
+### pinchflat
+Youtube scheduled downloader
+
 ### pigallery
 Photo viewer
 

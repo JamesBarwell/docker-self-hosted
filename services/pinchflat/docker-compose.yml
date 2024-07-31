@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  pinchflat:
+    image: ghcr.io/kieraneglin/pinchflat:latest
+    container_name: pinchflat
+    restart: unless-stopped
+    ports:
+      - ${PORT_PINCHFLAT}:8945
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/pinchflat:/config
+      - ${YOUTUBE_DIR}:/downloads
