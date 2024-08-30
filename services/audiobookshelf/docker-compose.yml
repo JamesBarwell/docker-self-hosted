@@ -16,3 +16,4 @@ services:
       - ${CONFIG_DIR}/audiobookshelf/metadata:/metadata
       - ${AUDIOBOOKS_DIR}:/audiobooks:ro
       - ${PODCASTS_DIR}:/podcasts:ro
+      - ${RADIO_DIR}:/radio:ro
