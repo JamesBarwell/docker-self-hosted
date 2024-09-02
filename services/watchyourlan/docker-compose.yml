@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  watchyourlan:
+    image: aceberg/watchyourlan:v2
+    container_name: watchyourlan
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      TZ: ${TZ}
+      IFACES: ${WATCHYOURLAN_NETWORK_INTERFACE}
+      PORT: ${PORT_WATCHYOURLAN}
+    volumes:
+      - ${CONFIG_DIR}/watchyourlan:/data/WatchYourLAN

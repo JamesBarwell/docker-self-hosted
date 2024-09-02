@@ -105,6 +105,9 @@ E-book and comic server
 ### uptime-kuma
 Monitoring tool
 
+### watchyourlan
+Network IP scanner with web GUI
+
 ### wireguard
 VPN server and client
 
