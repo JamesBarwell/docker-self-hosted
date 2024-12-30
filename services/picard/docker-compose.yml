@@ -2,7 +2,7 @@ version: "3"
 
 services:
   picard:
-    image: mikenye/picard:2.10
+    image: mikenye/picard:2.12.3
     container_name: picard
     restart: unless-stopped
     ports:
@@ -13,4 +13,4 @@ services:
       TZ: ${TZ}
     volumes:
       - ${CONFIG_DIR}/picard:/config
-      - ${MUSIC_DIR}:/storage
+      - ${DOWNLOADS_DIR}:/storage
