@@ -13,4 +13,4 @@ services:
       TZ: ${TZ}
     volumes:
       - ${CONFIG_DIR}/stump:/config
-      - ${EBOOKS_DIR}:/data
+      - ${EBOOK_DIR}:/data

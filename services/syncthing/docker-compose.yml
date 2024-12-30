@@ -14,4 +14,5 @@ services:
       - ${CONFIG_DIR}/syncthing/config:/var/syncthing/config
       - ${SYNC_PHONE_DIR}:/var/syncthing/sync-phone
       - ${SYNC_PHONE_DCIM_DIR}:/var/syncthing/sync-phone-dcim
+      - ${SYNC_PHONE_GPX_DIR}:/var/syncthing/sync-phone-gpx
       - ${SYNC_SERVER_DIR}:/var/syncthing/sync-server

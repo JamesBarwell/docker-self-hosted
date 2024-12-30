@@ -14,4 +14,4 @@ services:
       TZ: ${TZ}
     volumes:
       - ${CONFIG_DIR}/ubooquity:/config
-      - ${EBOOKS_DIR}:/books
+      - ${EBOOK_DIR}:/books

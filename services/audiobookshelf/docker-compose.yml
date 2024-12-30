@@ -14,6 +14,6 @@ services:
     volumes:
       - ${CONFIG_DIR}/audiobookshelf/config:/config
       - ${CONFIG_DIR}/audiobookshelf/metadata:/metadata
-      - ${AUDIOBOOKS_DIR}:/audiobooks:ro
+      - ${AUDIOBOOK_DIR}:/audiobooks:ro
       - ${PODCASTS_DIR}:/podcasts:ro
       - ${RADIO_DIR}:/radio:ro

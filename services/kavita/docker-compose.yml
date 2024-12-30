@@ -13,4 +13,4 @@ services:
       TZ: ${TZ}
     volumes:
       - ${CONFIG_DIR}/kavita:/kavita/config
-      - ${EBOOKS_DIR}:/ebooks:ro
+      - ${EBOOK_DIR}:/ebooks:ro
