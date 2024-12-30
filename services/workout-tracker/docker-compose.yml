@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  workout-tracker:
+    image: ghcr.io/jovandeginste/workout-tracker:release
+    container_name: workout-tracker
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    ports:
+      - ${PORT_WORKOUTTRACKER}:8080
+    environment:
+      TZ: ${TZ}
+      WT_REGISTRATION_DISABLED: "true"
+      WT_SOCIALS_DISABLED: "true"
+    volumes:
+      - ${CONFIG_DIR}/workout-tracker:/data
+      - ${SYNC_PHONE_GPX_DIR}:/imports/admin
