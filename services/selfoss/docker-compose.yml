@@ -2,7 +2,7 @@ version: "3"
 
 services:
   selfoss:
-    image: rsprta/selfoss
+    image: docker.io/rsprta/selfoss
     container_name: selfoss
     restart: unless-stopped
     ports:

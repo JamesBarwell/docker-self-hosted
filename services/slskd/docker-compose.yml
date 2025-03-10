@@ -2,7 +2,7 @@ version: "3"
 
 services:
   slskd:
-    image: slskd/slskd
+    image: docker.io/slskd/slskd
     container_name: slskd
     restart: unless-stopped
     network_mode: "container:wireguard"

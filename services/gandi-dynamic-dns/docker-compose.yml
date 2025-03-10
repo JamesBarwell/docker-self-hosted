@@ -2,7 +2,7 @@ version: "3"
 
 services:
   gandi-dynamic-dns:
-    image: adamvig/gandi-dynamic-dns:latest
+    image: docker.io/adamvig/gandi-dynamic-dns:latest
     container_name: gandi-dynamic-dns
     restart: unless-stopped
     environment:

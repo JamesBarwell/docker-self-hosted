@@ -2,7 +2,7 @@ version: "3"
 
 services:
   picard:
-    image: mikenye/picard:2.12.3
+    image: docker.io/mikenye/picard:2.12.3
     container_name: picard
     restart: unless-stopped
     ports:

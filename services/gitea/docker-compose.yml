@@ -2,7 +2,7 @@ version: "3"
 
 services:
   gitea:
-    image: gitea/gitea:latest
+    image: docker.io/gitea/gitea:latest
     container_name: gitea
     restart: unless-stopped
     ports:

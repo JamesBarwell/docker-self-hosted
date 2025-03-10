@@ -2,7 +2,7 @@ version: "3"
 
 services:
   caddy:
-    image: caddy
+    image: docker.io/library/caddy
     container_name: caddy
     restart: unless-stopped
     ports:

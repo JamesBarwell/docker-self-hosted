@@ -2,6 +2,6 @@ version: "3"
 
 services:
   curl:
-    image: curlimages/curl
+    image: docker.io/curlimages/curl
     network_mode: "container:wireguard"
     command: ifconfig.co

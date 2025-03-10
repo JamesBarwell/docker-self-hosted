@@ -2,7 +2,7 @@ version: "3"
 
 services:
   stirlingpdf:
-    image: frooodle/s-pdf:latest-ultra-lite
+    image: docker.io/frooodle/s-pdf:latest-ultra-lite
     container_name: stirlingpdf
     restart: unless-stopped
     ports:

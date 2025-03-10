@@ -2,7 +2,7 @@ version: "3"
 
 services:
   stump:
-    image: aaronleopold/stump:nightly
+    image: docker.io/aaronleopold/stump:nightly
     container_name: stump
     restart: unless-stopped
     ports:

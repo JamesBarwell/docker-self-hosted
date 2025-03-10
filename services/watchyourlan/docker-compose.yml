@@ -2,7 +2,7 @@ version: "3"
 
 services:
   watchyourlan:
-    image: aceberg/watchyourlan:v2
+    image: docker.io/aceberg/watchyourlan:v2
     container_name: watchyourlan
     restart: unless-stopped
     network_mode: host

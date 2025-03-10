@@ -2,7 +2,7 @@ version: "3"
 
 services:
   archivebox:
-    image: archivebox/archivebox:latest
+    image: docker.io/archivebox/archivebox:latest
     container_name: archivebox
     restart: unless-stopped
     ports:

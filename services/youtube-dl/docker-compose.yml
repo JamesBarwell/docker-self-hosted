@@ -2,7 +2,7 @@ version: "3"
 
 services:
   youtube-dl:
-    image: jeeaaasustest/youtube-dl:latest
+    image: docker.io/jeeaaasustest/youtube-dl:latest
     container_name: youtube-dl
     restart: unless-stopped
     ports:

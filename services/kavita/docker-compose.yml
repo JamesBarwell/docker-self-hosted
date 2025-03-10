@@ -2,7 +2,7 @@ version: "3"
 
 services:
   kavita:
-    image: jvmilazz0/kavita:latest
+    image: lscr.io/linuxserver/kavita:latest
     container_name: kavita
     restart: unless-stopped
     ports:

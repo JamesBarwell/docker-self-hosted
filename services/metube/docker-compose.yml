@@ -2,7 +2,7 @@ version: "3"
 
 services:
   metube:
-    image: alexta69/metube
+    image: docker.io/alexta69/metube
     container_name: metube
     restart: unless-stopped
     ports:

@@ -2,7 +2,7 @@ version: "3"
 
 services:
   pigallery:
-    image: bpatrik/pigallery2:latest
+    image: docker.io/bpatrik/pigallery2:latest
     container_name: pigallery
     restart: unless-stopped
     user: ${PUID}:${PGID}
