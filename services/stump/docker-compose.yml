@@ -11,6 +11,7 @@ services:
       PUID: ${PUID}
       PGID: ${PGID}
       TZ: ${TZ}
+      SESSION_TTL: 31536000
     volumes:
       - ${CONFIG_DIR}/stump:/config
       - ${EBOOK_DIR}:/data
