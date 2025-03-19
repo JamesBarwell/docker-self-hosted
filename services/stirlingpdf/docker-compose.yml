@@ -4,7 +4,7 @@ services:
   stirlingpdf:
     image: docker.io/frooodle/s-pdf:latest-ultra-lite
     container_name: stirlingpdf
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_STIRLINGPDF}:8080
     user: ${PUID}:${PGID}

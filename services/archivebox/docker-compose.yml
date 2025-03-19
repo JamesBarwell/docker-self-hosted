@@ -4,7 +4,7 @@ services:
   archivebox:
     image: docker.io/archivebox/archivebox:latest
     container_name: archivebox
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_ARCHIVEBOX}:8000
     environment:

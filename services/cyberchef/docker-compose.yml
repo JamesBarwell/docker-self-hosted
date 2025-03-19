@@ -4,6 +4,6 @@ services:
   cyberchef:
     image: ghcr.io/gchq/cyberchef:latest
     container_name: cyberchef
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_CYBERCHEF}:80

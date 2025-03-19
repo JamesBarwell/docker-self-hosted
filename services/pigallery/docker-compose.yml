@@ -4,7 +4,7 @@ services:
   pigallery:
     image: docker.io/bpatrik/pigallery2:latest
     container_name: pigallery
-    restart: unless-stopped
+    restart: always
     user: ${PUID}:${PGID}
     ports:
       - ${PORT_PIGALLERY}:80

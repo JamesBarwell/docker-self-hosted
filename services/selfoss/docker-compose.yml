@@ -4,7 +4,7 @@ services:
   selfoss:
     image: docker.io/rsprta/selfoss
     container_name: selfoss
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_SELFOSS}:8888
     environment:

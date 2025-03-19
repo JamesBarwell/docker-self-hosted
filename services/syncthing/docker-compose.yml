@@ -4,7 +4,7 @@ services:
   syncthing:
     image: docker.io/syncthing/syncthing
     container_name: syncthing
-    restart: unless-stopped
+    restart: always
     network_mode: host
     environment:
       PUID: ${PUID}

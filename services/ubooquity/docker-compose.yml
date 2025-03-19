@@ -4,7 +4,7 @@ services:
   ubooquity:
     image: lscr.io/linuxserver/ubooquity:latest
     container_name: ubooquity
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_UBOOQUITY_LIBRARY}:2202
       - ${PORT_UBOOQUITY_ADMIN}:2203

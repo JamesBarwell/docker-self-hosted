@@ -4,7 +4,7 @@ services:
   circles:
     image: circles
     container_name: circles
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_CIRCLES}:8080
     environment:

@@ -4,7 +4,7 @@ services:
   gitea:
     image: docker.io/gitea/gitea:latest
     container_name: gitea
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_GITEA_HTTP}:3000
       - ${PORT_GITEA_SSH}:22

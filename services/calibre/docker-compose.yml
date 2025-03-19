@@ -4,7 +4,7 @@ services:
   calibre:
     image: lscr.io/linuxserver/calibre:latest
     container_name: calibre
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_CALIBRE_DESKTOP_GUI}:8080
       - ${PORT_CALIBRE_WEBSERVER_GUI}:8081

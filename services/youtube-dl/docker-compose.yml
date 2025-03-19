@@ -4,7 +4,7 @@ services:
   youtube-dl:
     image: docker.io/jeeaaasustest/youtube-dl:latest
     container_name: youtube-dl
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_YOUTUBEDL}:8080
     environment:

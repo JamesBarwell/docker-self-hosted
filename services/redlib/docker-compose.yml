@@ -4,7 +4,7 @@ services:
   redlib:
     image: quay.io/redlib/redlib:latest
     container_name: redlib
-    restart: unless-stopped
+    restart: always
     user: nobody
     cap_drop:
       - ALL

@@ -4,7 +4,7 @@ services:
   photofield:
     image: ghcr.io/smilyorg/photofield
     container_name: photofield
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_PHOTOFIELD}:8080
     environment:

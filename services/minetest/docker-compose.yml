@@ -4,7 +4,7 @@ services:
   minetest:
     image: lscr.io/linuxserver/minetest:latest
     container_name: minetest
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_MINETEST}:30000/udp
     environment:

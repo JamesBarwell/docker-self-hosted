@@ -4,7 +4,7 @@ services:
   jellyfin:
     image: docker.io/jellyfin/jellyfin:latest
     container_name: jellyfin
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_JELLYFIN}:8096
     environment:

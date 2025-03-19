@@ -4,7 +4,7 @@ services:
   picard:
     image: docker.io/mikenye/picard:2.12.3
     container_name: picard
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_PICARD}:5800
     environment:

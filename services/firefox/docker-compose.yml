@@ -4,7 +4,7 @@ services:
   firefox:
     image: lscr.io/linuxserver/firefox:latest
     container_name: firefox
-    restart: unless-stopped
+    restart: always
     network_mode: "container:wireguard"
     shm_size: "1gb"
     environment:

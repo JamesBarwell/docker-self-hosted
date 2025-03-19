@@ -4,7 +4,7 @@ services:
   pinchflat:
     image: ghcr.io/kieraneglin/pinchflat:latest
     container_name: pinchflat
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_PINCHFLAT}:8945
     environment:

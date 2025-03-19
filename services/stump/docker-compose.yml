@@ -4,7 +4,7 @@ services:
   stump:
     image: docker.io/aaronleopold/stump:nightly
     container_name: stump
-    restart: unless-stopped
+    restart: always
     ports:
       - ${PORT_STUMP}:10801
     environment:

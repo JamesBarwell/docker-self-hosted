@@ -4,7 +4,7 @@ services:
   workout-tracker:
     image: ghcr.io/jovandeginste/workout-tracker:release
     container_name: workout-tracker
-    restart: unless-stopped
+    restart: always
     user: ${PUID}:${PGID}
     ports:
       - ${PORT_WORKOUTTRACKER}:8080

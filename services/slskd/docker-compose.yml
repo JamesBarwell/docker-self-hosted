@@ -4,7 +4,7 @@ services:
   slskd:
     image: docker.io/slskd/slskd
     container_name: slskd
-    restart: unless-stopped
+    restart: always
     network_mode: "container:wireguard"
     user: ${PUID}:${PGID}
     environment:

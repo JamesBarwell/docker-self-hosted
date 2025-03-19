@@ -4,7 +4,7 @@ services:
   watchyourlan:
     image: docker.io/aceberg/watchyourlan:v2
     container_name: watchyourlan
-    restart: unless-stopped
+    restart: always
     network_mode: host
     environment:
       TZ: ${TZ}
