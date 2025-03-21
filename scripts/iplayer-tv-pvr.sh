@@ -23,8 +23,8 @@ fi
 
 docker run \
     --rm \
-    --user $(id -u):$(id -g) \
+    --userns=keep-id \
     -v ${CONFIG_DIR}/iplayer-tv:/data/config \
     -v ${IPLAYER_DIR}:/data/output \
-    barwell/get-iplayer:latest \
+    docker.io/barwell/get-iplayer:latest \
     ${COMMAND}
