@@ -15,3 +15,9 @@ services:
       CRON_PERIOD: 60m
     volumes:
       - ${CONFIG_DIR}/selfoss:/selfoss/data
+    healthcheck:
+      test: wget -q --spider 127.0.0.1:8888/ || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
