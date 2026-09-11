@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  luanti:
+    image: ghcr.io/luanti-org/luanti:latest
+    container_name: luanati
+    restart: always
+    ports:
+      - ${PORT_LUANATI}:30000/udp
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - ${CONFIG_DIR}/luanati/config:/etc/minetest:ro
+      - ${CONFIG_DIR}/luanati/data:/var/lib/minetest
+    command: --config /etc/minetest/minetest.conf --gameid minetest_game --worldname world

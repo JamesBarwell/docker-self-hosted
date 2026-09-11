@@ -57,8 +57,8 @@ Recipe and ingredient manager
 ### metube
 Youtube downloader, supports audio
 
-### minetest
-Server for a voxel block game
+### luanati
+Server for an open-source block building game
 
 ### navidrome
 Music streaming server

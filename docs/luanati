@@ -1,0 +1,22 @@
+Luanati server
+---
+
+Manually create config before starting container.
+
+See docker instructions for reference: https://docs.luanti.org/for-server-hosts/setup/containers/
+
+cd services/config
+mkdir luanati
+cd luanati
+mkdir -p config data/.minetest/{games,mods}
+
+Copy example config to config/minetest.conf and edit as appropriate.
+> https://github.com/luanti-org/luanti/blob/master/minetest.conf.example
+
+cd data/.mintest/games
+git clone https://github.com/luanti-org/minetest_game
+git clone https://codeberg.org/mineclonia/mineclonia
+git clone https://github.com/asuna-mt/asuna
+
+# Nasty, but have to do it because it's not possible to set different permissions on the directory tree as they suggest when using podman - causes an OCI error. Do not do this if running a public server.
+chmod -R 777 data/
